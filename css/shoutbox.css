@@ -1,0 +1,48 @@
+/* Shoutbox built-in UI: what Bootstrap 5 does not cover (fixed launcher, slide-in panel, toasts, display sizes).
+   Works without Bootstrap too, only plainer. Every class is prefixed sb-. */
+
+.sb-launcher { position: fixed; right: 20px; bottom: 20px; z-index: 1035; width: 52px; height: 52px; padding: 0; display: flex; align-items: center; justify-content: center; font-size: 22px; box-shadow: 0 4px 16px rgba(0, 0, 0, .25); cursor: pointer; }
+.sb-launcher .sb-badge { position: absolute; top: -4px; right: -4px; font-size: 12px; }
+.sb-launcher-open { opacity: .6; }
+
+.sb-panel { position: fixed; right: 20px; bottom: 84px; z-index: 1036; width: min(420px, calc(100vw - 40px)); max-height: min(70vh, 720px); display: flex; flex-direction: column; margin: 0; }
+.sb-panel[hidden] { display: none; }
+.sb-panel .sb-panel-feed { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+.sb-panel .sb-feed { display: flex; flex-direction: column; min-height: 0; flex: 1; }
+.sb-panel .sb-body { overflow-y: auto; min-height: 0; flex: 1; }
+.sb-panel .sb-composer { padding: .75rem 1rem; border-top: 1px solid rgba(0, 0, 0, .125); }
+@media (max-width: 480px) {
+    .sb-panel { right: 0; bottom: 0; width: 100vw; max-height: 100vh; height: 100vh; border-radius: 0; }
+    .sb-launcher-open { display: none; }
+}
+
+.sb-toasts { z-index: 1037; max-width: 360px; }
+.sb-toast { cursor: pointer; border-left-width: 4px; }
+
+.sb-scroll { max-height: 360px; overflow-y: auto; }
+.sb-text { overflow-wrap: anywhere; }
+.sb-nick { white-space: nowrap; }
+.sb-list .list-group-item { background: transparent; }
+.sb-actions { opacity: .35; }
+.sb-list .list-group-item:hover .sb-actions, .sb-actions:focus-within { opacity: 1; }
+.sb-pin { border-left-width: 4px; }
+.sb-pin-icon { padding-top: .15rem; }
+.sb-mine .sb-nick { text-decoration: underline dotted; }
+.sb-chips { display: flex; flex-wrap: wrap; gap: .25rem; }
+
+/* big screen: large type, --sb-scale for other screen sizes */
+.shoutbox-display { --sb-scale: 1; border: 0; background: transparent; }
+.shoutbox-display .sb-display-title { font-size: calc(2.75rem * var(--sb-scale)); font-weight: 800; text-transform: uppercase; }
+.shoutbox-display .sb-eyebrow { font-size: calc(1rem * var(--sb-scale)); letter-spacing: .12em; }
+.shoutbox-display .sb-display-hint { font-size: calc(1.25rem * var(--sb-scale)); }
+.shoutbox-display .sb-pin-lg { padding: calc(1.25rem * var(--sb-scale)); border-left-width: 8px; }
+.shoutbox-display .sb-pin-lg .sb-pin-title { font-size: calc(1.75rem * var(--sb-scale)); }
+.shoutbox-display .sb-pin-lg .sb-pin-text { font-size: calc(1.25rem * var(--sb-scale)); }
+.shoutbox-display .sb-card .sb-nick { font-size: calc(1.25rem * var(--sb-scale)); }
+.shoutbox-display .sb-card .sb-text { font-size: calc(1.35rem * var(--sb-scale)); line-height: 1.4; }
+.shoutbox-display .sb-card .sb-meta { font-size: calc(.95rem * var(--sb-scale)); }
+.shoutbox-display .sb-empty { font-size: calc(1.5rem * var(--sb-scale)); }
+
+@media print {
+    .sb-launcher, .sb-panel, .sb-toasts { display: none !important; }
+}

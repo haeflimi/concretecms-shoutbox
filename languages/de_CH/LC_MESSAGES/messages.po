@@ -1,0 +1,449 @@
+msgid ""
+msgstr ""
+"Language: de_CH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: shoutbox tools\n"
+
+msgid "Shoutbox"
+msgstr "Shoutbox"
+
+msgid "The shoutbox on a page: shouts in channels, pinned announcements and the composer; a big-screen template without input."
+msgstr "Die Shoutbox auf einer Seite: Shouts in Kanälen, angeheftete Meldungen und das Eingabefeld; ein Template für die grosse Leinwand ohne Eingabe."
+
+msgid "Eyebrow"
+msgstr "Kicker"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "From the hall"
+msgstr "Aus der Halle"
+
+msgid "Channels"
+msgstr "Kanäle"
+
+msgid "Nothing ticked shows all channels. The channels themselves are set up under Dashboard › Shoutbox."
+msgstr "Nichts angekreuzt zeigt alle Kanäle. Die Kanäle selbst werden unter Dashboard › Shoutbox eingerichtet."
+
+msgid "Default channel for new shouts"
+msgstr "Standardkanal für neue Shouts"
+
+msgid "First channel of the block"
+msgstr "Erster Kanal des Blocks"
+
+msgid "Number of shouts shown"
+msgstr "Anzahl angezeigter Shouts"
+
+msgid "Hint on the big screen"
+msgstr "Hinweis auf der grossen Leinwand"
+
+msgid "e.g. lan.turicane.ch/shout · Discord #shoutbox"
+msgstr "z. B. lan.turicane.ch/shout · Discord #shoutbox"
+
+msgid "Only the Display template shows it, next to \"Write with us:\"."
+msgstr "Nur das Template «Display» zeigt ihn, neben «Schreib mit:»."
+
+msgid "Shoutbox: not shown to this visitor (the read rule in Dashboard › Shoutbox decides)."
+msgstr "Shoutbox: für diese Besucherin, diesen Besucher nicht sichtbar (die Leseregel unter Dashboard › Shoutbox entscheidet)."
+
+msgid "You may read along but not shout here."
+msgstr "Du kannst mitlesen, aber hier nicht shouten."
+
+msgid "Shouting needs JavaScript."
+msgstr "Zum Shouten braucht es JavaScript."
+
+msgid "A chat room for the members: shouts in channels, pinned announcements, timed bans and a big-screen block, live through Mercure."
+msgstr "Ein Chatraum für die Mitglieder: Shouts in Kanälen, angeheftete Meldungen, befristete Sperren und ein Block für die grosse Leinwand, live über Mercure."
+
+msgid "The shoutbox settings were saved."
+msgstr "Die Shoutbox-Einstellungen wurden gespeichert."
+
+msgid "No member called \"%s\"."
+msgstr "Kein Mitglied namens «%s»."
+
+msgid "%s is banned."
+msgstr "%s ist gesperrt."
+
+msgid "The ban was lifted."
+msgstr "Die Sperre wurde aufgehoben."
+
+msgid "Guests (everybody)"
+msgstr "Gäste (alle)"
+
+msgid "Signed-in members"
+msgstr "Angemeldete Mitglieder"
+
+msgid "Primary"
+msgstr "Primär"
+
+msgid "Secondary"
+msgstr "Sekundär"
+
+msgid "Green"
+msgstr "Grün"
+
+msgid "Red"
+msgstr "Rot"
+
+msgid "Yellow"
+msgstr "Gelb"
+
+msgid "Blue"
+msgstr "Blau"
+
+msgid "Access"
+msgstr "Zugang"
+
+msgid "The shoutbox is on"
+msgstr "Die Shoutbox ist eingeschaltet"
+
+msgid "Who may read"
+msgstr "Wer lesen darf"
+
+msgid "Hold Ctrl (Cmd on a Mac) to pick several. Administrators always read."
+msgstr "Mit Ctrl (Cmd auf dem Mac) mehrere auswählen. Administratoren lesen immer."
+
+msgid "Who may shout"
+msgstr "Wer shouten darf"
+
+msgid "Guests never shout, whatever is ticked here."
+msgstr "Gäste shouten nie, egal was hier angekreuzt ist."
+
+msgid "Moderators"
+msgstr "Moderation"
+
+msgid "Pin announcements, hide shouts, ban members. Administrators always moderate. The first of these groups a moderator belongs to is the sender of their announcements (\"Catering\")."
+msgstr "Meldungen anheften, Shouts ausblenden, Mitglieder sperren. Administratoren moderieren immer. Die erste dieser Gruppen, in der jemand ist, erscheint als Absender der Meldungen («Catering»)."
+
+msgid "The floating panel shows on pages with the page attribute \"Shoutbox\" (%s) ticked: set it in the page's attributes panel. The block \"Shoutbox\" can be placed on any page regardless."
+msgstr "Das schwebende Panel erscheint auf Seiten mit angekreuztem Seitenattribut «Shoutbox» (%s): im Attribute-Panel der Seite setzen. Der Block «Shoutbox» lässt sich unabhängig davon auf jeder Seite platzieren."
+
+msgid "Pages with the panel right now:"
+msgstr "Seiten mit dem Panel im Moment:"
+
+msgid "No page has it yet."
+msgstr "Noch keine Seite hat es."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Handle"
+msgstr "Handle"
+
+msgid "Colour"
+msgstr "Farbe"
+
+msgid "Icon"
+msgstr "Icon"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Add channel"
+msgstr "Kanal hinzufügen"
+
+msgid "The handle is derived from the name when left empty; shouts already posted keep their channel handle, so rename rather than delete and re-create. Removing all channels restores the defaults."
+msgstr "Das Handle wird aus dem Namen abgeleitet, wenn es leer bleibt; bereits gepostete Shouts behalten ihr Kanal-Handle, also lieber umbenennen als löschen und neu anlegen. Werden alle Kanäle entfernt, kommen die Standardkanäle zurück."
+
+msgid "Limits"
+msgstr "Limits"
+
+msgid "Characters per shout"
+msgstr "Zeichen pro Shout"
+
+msgid "Shouts loaded in the panel"
+msgstr "Shouts, die das Panel lädt"
+
+msgid "Shouts in a row"
+msgstr "Shouts hintereinander"
+
+msgid "… within seconds"
+msgstr "… innerhalb von Sekunden"
+
+msgid "Automatic ban, seconds"
+msgstr "Automatische Sperre, Sekunden"
+
+msgid "A member who sends more than the shouts in a row above gets this ban; moderators are exempt."
+msgstr "Wer mehr als die oben eingestellten Shouts hintereinander schickt, bekommt diese Sperre; die Moderation ist ausgenommen."
+
+msgid "Pin durations, minutes"
+msgstr "Anheft-Dauern, Minuten"
+
+msgid "Choices for moderators; 0 = until unpinned."
+msgstr "Auswahl für die Moderation; 0 = bis zum Lösen."
+
+msgid "Announcement pop-up, seconds"
+msgstr "Einblendung der Meldungen, Sekunden"
+
+msgid "Polling without Mercure, seconds"
+msgstr "Abfrage ohne Mercure, Sekunden"
+
+msgid "Retention"
+msgstr "Aufbewahrung"
+
+msgid "Keep shouts for days"
+msgstr "Shouts behalten für Tage"
+
+msgid "The task \"Purge Shoutbox\" (Dashboard › System › Automation) deletes older shouts and expired bans; schedule it or run it by hand."
+msgstr "Die Aufgabe «Shoutbox aufräumen» (Dashboard › System › Automatisierung) löscht ältere Shouts und abgelaufene Sperren; einplanen oder von Hand starten."
+
+msgid "Real-time"
+msgstr "Echtzeit"
+
+msgid "Mercure on"
+msgstr "Mercure an"
+
+msgid "token in the address (hub on another origin)"
+msgstr "Token in der Adresse (Hub auf einer anderen Origin)"
+
+msgid "cookie (hub on the site's origin)"
+msgstr "Cookie (Hub auf der Origin der Website)"
+
+msgid "Topic %1$s, browsers authenticate by %2$s."
+msgstr "Topic %1$s, Browser authentifizieren sich per %2$s."
+
+msgid "Mercure off"
+msgstr "Mercure aus"
+
+msgid "The shoutbox polls every %s seconds instead."
+msgstr "Die Shoutbox fragt stattdessen alle %s Sekunden nach."
+
+msgid "System › Notification › Events"
+msgstr "System › Benachrichtigung › Ereignisse"
+
+msgid "Set up under %s (server-sent events, hub publish URL, key)."
+msgstr "Einrichten unter %s (Server-Sent Events, Publish-URL des Hubs, Schlüssel)."
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Bans"
+msgstr "Sperren"
+
+msgid "Nobody is banned right now."
+msgstr "Im Moment ist niemand gesperrt."
+
+msgid "Member"
+msgstr "Mitglied"
+
+msgid "Until"
+msgstr "Bis"
+
+msgid "Reason"
+msgstr "Grund"
+
+msgid "By"
+msgstr "Durch"
+
+msgid "Lift the ban"
+msgstr "Sperre aufheben"
+
+msgid "Username or email"
+msgstr "Benutzername oder E-Mail"
+
+msgid "Minutes"
+msgstr "Minuten"
+
+msgid "Reason (optional)"
+msgstr "Grund (optional)"
+
+msgid "Ban"
+msgstr "Sperren"
+
+msgid "Deleted %1$s shouts older than %2$s days."
+msgstr "%1$s Shouts gelöscht, die älter als %2$s Tage waren."
+
+msgid "Deleted %s expired bans."
+msgstr "%s abgelaufene Sperren gelöscht."
+
+msgid "Purge Shoutbox"
+msgstr "Shoutbox aufräumen"
+
+msgid "Deletes shouts older than the retention set in Dashboard › Shoutbox and the bans that ran out."
+msgstr "Löscht Shouts, die älter sind als die Aufbewahrung unter Dashboard › Shoutbox, und abgelaufene Sperren."
+
+msgid "Shoutbox purged."
+msgstr "Shoutbox aufgeräumt."
+
+msgid "Announcement not found."
+msgstr "Meldung nicht gefunden."
+
+msgid "Shout not found."
+msgstr "Shout nicht gefunden."
+
+msgid "Ban not found."
+msgstr "Sperre nicht gefunden."
+
+msgid "You may not read the shoutbox."
+msgstr "Du darfst die Shoutbox nicht lesen."
+
+msgid "Please sign in first."
+msgstr "Bitte melde dich zuerst an."
+
+msgid "Your session expired. Please reload the page."
+msgstr "Deine Sitzung ist abgelaufen. Bitte lade die Seite neu."
+
+msgid "Only moderators can do that."
+msgstr "Das kann nur die Moderation."
+
+msgid "You may not shout here."
+msgstr "Du darfst hier nicht shouten."
+
+msgid "Publishing to the Mercure hub failed: %s"
+msgstr "Senden an den Mercure-Hub fehlgeschlagen: %s"
+
+msgid "Deleted user"
+msgstr "Gelöschtes Mitglied"
+
+msgid "automatic"
+msgstr "automatisch"
+
+msgid "General"
+msgstr "Allgemein"
+
+msgid "Catering"
+msgstr "Catering"
+
+msgid "Tournaments"
+msgstr "Turniere"
+
+msgid "Tech"
+msgstr "Technik"
+
+msgid "Open the shoutbox"
+msgstr "Shoutbox öffnen"
+
+msgid "Close"
+msgstr "Schliessen"
+
+msgid "%s shouts"
+msgstr "%s Shouts"
+
+msgid "Channel"
+msgstr "Kanal"
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Shout in %s"
+msgstr "Shout in %s"
+
+msgid "%1$s / %2$s characters"
+msgstr "%1$s / %2$s Zeichen"
+
+msgid "Send"
+msgstr "Senden"
+
+msgid "Pin"
+msgstr "Anheften"
+
+msgid "Shout"
+msgstr "Shout"
+
+msgid "Pinned announcement"
+msgstr "Angeheftete Meldung"
+
+msgid "Text"
+msgstr "Text"
+
+msgid "Shows at the top of the channel until you unpin it."
+msgstr "Erscheint oben im Kanal, bis du sie löst."
+
+msgid "Pinned for"
+msgstr "Angeheftet für"
+
+msgid "until unpinned"
+msgstr "bis zum Lösen"
+
+msgid "%s minutes"
+msgstr "%s Minuten"
+
+msgid "Pinned · %1$s · %2$s"
+msgstr "Angeheftet · %1$s · %2$s"
+
+msgid "Unpin"
+msgstr "Lösen"
+
+msgid "Hide"
+msgstr "Ausblenden"
+
+msgid "Ban %s for how many minutes?"
+msgstr "%s für wie viele Minuten sperren?"
+
+msgid "No shouts yet. Write the first one."
+msgstr "Noch keine Shouts. Schreib den ersten."
+
+msgid "It is still quiet in %s."
+msgstr "In %s ist es noch ruhig."
+
+msgid "Sign in to join the conversation."
+msgstr "Melde dich an, um mitzuschreiben."
+
+msgid "Sign in"
+msgstr "Anmelden"
+
+msgid "Live from the hall"
+msgstr "Live aus der Halle"
+
+msgid "Write with us:"
+msgstr "Schreib mit:"
+
+msgid "You are banned until %s."
+msgstr "Du bist bis %s gesperrt."
+
+msgid "Too fast: take a %s minute break."
+msgstr "Zu schnell: %s Minuten Pause."
+
+msgid "Mute announcements"
+msgstr "Meldungen stummschalten"
+
+msgid "Show announcements"
+msgstr "Meldungen einblenden"
+
+msgid "New shouts"
+msgstr "Neue Shouts"
+
+msgid "Loading…"
+msgstr "Lädt …"
+
+msgid "Offline, trying again…"
+msgstr "Offline, versuche es weiter …"
+
+msgid "Hide this shout for everybody?"
+msgstr "Diesen Shout für alle ausblenden?"
+
+msgid "Unpin this announcement?"
+msgstr "Diese Meldung lösen?"
+
+msgid "Seat %s"
+msgstr "Platz %s"
+
+msgid "you"
+msgstr "du"
+
+msgid "today"
+msgstr "heute"
+
+msgid "Write something first."
+msgstr "Schreib zuerst etwas."
+
+msgid "Unknown channel."
+msgstr "Unbekannter Kanal."
+
+msgid "Give the announcement a title."
+msgstr "Gib der Meldung einen Titel."
+
+msgid "Member not found."
+msgstr "Mitglied nicht gefunden."
+
+msgid "Moderators cannot be banned."
+msgstr "Die Moderation lässt sich nicht sperren."
+
+msgid "Too many shouts in a row"
+msgstr "Zu viele Shouts hintereinander"
+
+msgid "At most %s characters, please."
+msgstr "Höchstens %s Zeichen, bitte."

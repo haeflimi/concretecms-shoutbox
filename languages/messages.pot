@@ -1,0 +1,502 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 03:46+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Shoutbox"
+msgstr ""
+
+msgid ""
+"The shoutbox on a page: shouts in channels, pinned announcements and the "
+"composer; a big-screen template without input."
+msgstr ""
+
+msgid "Eyebrow"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "From the hall"
+msgstr ""
+
+msgid "Channels"
+msgstr ""
+
+msgid ""
+"Nothing ticked shows all channels. The channels themselves are set up under "
+"Dashboard › Shoutbox."
+msgstr ""
+
+msgid "Default channel for new shouts"
+msgstr ""
+
+msgid "First channel of the block"
+msgstr ""
+
+msgid "Number of shouts shown"
+msgstr ""
+
+msgid "Hint on the big screen"
+msgstr ""
+
+msgid "e.g. lan.turicane.ch/shout · Discord #shoutbox"
+msgstr ""
+
+msgid "Only the Display template shows it, next to \"Write with us:\"."
+msgstr ""
+
+msgid ""
+"Shoutbox: not shown to this visitor (the read rule in Dashboard › Shoutbox "
+"decides)."
+msgstr ""
+
+msgid "You may read along but not shout here."
+msgstr ""
+
+msgid "Shouting needs JavaScript."
+msgstr ""
+
+msgid ""
+"A chat room for the members: shouts in channels, pinned announcements, timed "
+"bans and a big-screen block, live through Mercure."
+msgstr ""
+
+msgid "The shoutbox settings were saved."
+msgstr ""
+
+#, php-format
+msgid "No member called \"%s\"."
+msgstr ""
+
+#, php-format
+msgid "%s is banned."
+msgstr ""
+
+msgid "The ban was lifted."
+msgstr ""
+
+msgid "Guests (everybody)"
+msgstr ""
+
+msgid "Signed-in members"
+msgstr ""
+
+msgid "Primary"
+msgstr ""
+
+msgid "Secondary"
+msgstr ""
+
+msgid "Green"
+msgstr ""
+
+msgid "Red"
+msgstr ""
+
+msgid "Yellow"
+msgstr ""
+
+msgid "Blue"
+msgstr ""
+
+msgid "Access"
+msgstr ""
+
+msgid "The shoutbox is on"
+msgstr ""
+
+msgid "Who may read"
+msgstr ""
+
+msgid "Hold Ctrl (Cmd on a Mac) to pick several. Administrators always read."
+msgstr ""
+
+msgid "Who may shout"
+msgstr ""
+
+msgid "Guests never shout, whatever is ticked here."
+msgstr ""
+
+msgid "Moderators"
+msgstr ""
+
+msgid ""
+"Pin announcements, hide shouts, ban members. Administrators always moderate. "
+"The first of these groups a moderator belongs to is the sender of their "
+"announcements (\"Catering\")."
+msgstr ""
+
+#, php-format
+msgid ""
+"The floating panel shows on pages with the page attribute \"Shoutbox\" (%s) "
+"ticked: set it in the page's attributes panel. The block \"Shoutbox\" can be "
+"placed on any page regardless."
+msgstr ""
+
+msgid "Pages with the panel right now:"
+msgstr ""
+
+msgid "No page has it yet."
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "Handle"
+msgstr ""
+
+msgid "Colour"
+msgstr ""
+
+msgid "Icon"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Add channel"
+msgstr ""
+
+msgid ""
+"The handle is derived from the name when left empty; shouts already posted "
+"keep their channel handle, so rename rather than delete and re-create. "
+"Removing all channels restores the defaults."
+msgstr ""
+
+msgid "Limits"
+msgstr ""
+
+msgid "Characters per shout"
+msgstr ""
+
+msgid "Shouts loaded in the panel"
+msgstr ""
+
+msgid "Shouts in a row"
+msgstr ""
+
+msgid "… within seconds"
+msgstr ""
+
+msgid "Automatic ban, seconds"
+msgstr ""
+
+msgid ""
+"A member who sends more than the shouts in a row above gets this ban; "
+"moderators are exempt."
+msgstr ""
+
+msgid "Pin durations, minutes"
+msgstr ""
+
+msgid "Choices for moderators; 0 = until unpinned."
+msgstr ""
+
+msgid "Announcement pop-up, seconds"
+msgstr ""
+
+msgid "Polling without Mercure, seconds"
+msgstr ""
+
+msgid "Retention"
+msgstr ""
+
+msgid "Keep shouts for days"
+msgstr ""
+
+msgid ""
+"The task \"Purge Shoutbox\" (Dashboard › System › Automation) deletes older "
+"shouts and expired bans; schedule it or run it by hand."
+msgstr ""
+
+msgid "Real-time"
+msgstr ""
+
+msgid "Mercure on"
+msgstr ""
+
+msgid "token in the address (hub on another origin)"
+msgstr ""
+
+msgid "cookie (hub on the site's origin)"
+msgstr ""
+
+#, php-format
+msgid "Topic %1$s, browsers authenticate by %2$s."
+msgstr ""
+
+msgid "Mercure off"
+msgstr ""
+
+#, php-format
+msgid "The shoutbox polls every %s seconds instead."
+msgstr ""
+
+msgid "System › Notification › Events"
+msgstr ""
+
+#, php-format
+msgid "Set up under %s (server-sent events, hub publish URL, key)."
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Bans"
+msgstr ""
+
+msgid "Nobody is banned right now."
+msgstr ""
+
+msgid "Member"
+msgstr ""
+
+msgid "Until"
+msgstr ""
+
+msgid "Reason"
+msgstr ""
+
+msgid "By"
+msgstr ""
+
+msgid "Lift the ban"
+msgstr ""
+
+msgid "Username or email"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Reason (optional)"
+msgstr ""
+
+msgid "Ban"
+msgstr ""
+
+#, php-format
+msgid "Deleted %1$s shouts older than %2$s days."
+msgstr ""
+
+#, php-format
+msgid "Deleted %s expired bans."
+msgstr ""
+
+msgid "Purge Shoutbox"
+msgstr ""
+
+msgid ""
+"Deletes shouts older than the retention set in Dashboard › Shoutbox and the "
+"bans that ran out."
+msgstr ""
+
+msgid "Shoutbox purged."
+msgstr ""
+
+msgid "Announcement not found."
+msgstr ""
+
+msgid "Shout not found."
+msgstr ""
+
+msgid "Ban not found."
+msgstr ""
+
+msgid "You may not read the shoutbox."
+msgstr ""
+
+msgid "Please sign in first."
+msgstr ""
+
+msgid "Your session expired. Please reload the page."
+msgstr ""
+
+msgid "Only moderators can do that."
+msgstr ""
+
+msgid "You may not shout here."
+msgstr ""
+
+#, php-format
+msgid "Publishing to the Mercure hub failed: %s"
+msgstr ""
+
+msgid "Deleted user"
+msgstr ""
+
+msgid "automatic"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Catering"
+msgstr ""
+
+msgid "Tournaments"
+msgstr ""
+
+msgid "Tech"
+msgstr ""
+
+msgid "Open the shoutbox"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+#, php-format
+msgid "%s shouts"
+msgstr ""
+
+msgid "Channel"
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+#, php-format
+msgid "Shout in %s"
+msgstr ""
+
+#, php-format
+msgid "%1$s / %2$s characters"
+msgstr ""
+
+msgid "Send"
+msgstr ""
+
+msgid "Pin"
+msgstr ""
+
+msgid "Shout"
+msgstr ""
+
+msgid "Pinned announcement"
+msgstr ""
+
+msgid "Text"
+msgstr ""
+
+msgid "Shows at the top of the channel until you unpin it."
+msgstr ""
+
+msgid "Pinned for"
+msgstr ""
+
+msgid "until unpinned"
+msgstr ""
+
+#, php-format
+msgid "%s minutes"
+msgstr ""
+
+#, php-format
+msgid "Pinned · %1$s · %2$s"
+msgstr ""
+
+msgid "Unpin"
+msgstr ""
+
+msgid "Hide"
+msgstr ""
+
+#, php-format
+msgid "Ban %s for how many minutes?"
+msgstr ""
+
+msgid "No shouts yet. Write the first one."
+msgstr ""
+
+#, php-format
+msgid "It is still quiet in %s."
+msgstr ""
+
+msgid "Sign in to join the conversation."
+msgstr ""
+
+msgid "Sign in"
+msgstr ""
+
+msgid "Live from the hall"
+msgstr ""
+
+msgid "Write with us:"
+msgstr ""
+
+#, php-format
+msgid "You are banned until %s."
+msgstr ""
+
+#, php-format
+msgid "Too fast: take a %s minute break."
+msgstr ""
+
+msgid "Mute announcements"
+msgstr ""
+
+msgid "Show announcements"
+msgstr ""
+
+msgid "New shouts"
+msgstr ""
+
+msgid "Loading…"
+msgstr ""
+
+msgid "Offline, trying again…"
+msgstr ""
+
+msgid "Hide this shout for everybody?"
+msgstr ""
+
+msgid "Unpin this announcement?"
+msgstr ""
+
+#, php-format
+msgid "Seat %s"
+msgstr ""
+
+msgid "you"
+msgstr ""
+
+msgid "today"
+msgstr ""
+
+msgid "Write something first."
+msgstr ""
+
+msgid "Unknown channel."
+msgstr ""
+
+msgid "Give the announcement a title."
+msgstr ""
+
+msgid "Member not found."
+msgstr ""
+
+msgid "Moderators cannot be banned."
+msgstr ""
+
+msgid "Too many shouts in a row"
+msgstr ""
+
+#, php-format
+msgid "At most %s characters, please."
+msgstr ""

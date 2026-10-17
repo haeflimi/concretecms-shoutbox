@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+    <!-- shouts of the members and pinned announcements of the moderators; hidden rows stay until the purge task -->
+    <table name="sbMessages">
+        <field name="id" type="I"><key/><unsigned/><autoincrement/></field>
+        <field name="kind" type="C" size="8"><notnull/><default value="shout"/></field>
+        <field name="uID" type="I"><unsigned/><notnull/></field>
+        <field name="channel" type="C" size="32"><notnull/></field>
+        <field name="title" type="C" size="120"></field>
+        <field name="body" type="C" size="1000"><notnull/></field>
+        <field name="byLabel" type="C" size="64"></field>
+        <field name="createdAt" type="T"><notnull/></field>
+        <field name="pinnedUntil" type="T"></field>
+        <field name="unpinnedAt" type="T"></field>
+        <field name="hiddenAt" type="T"></field>
+        <field name="hiddenBy" type="I"><unsigned/></field>
+        <index name="sbMessagesKindCreated"><col>kind</col><col>createdAt</col></index>
+        <index name="sbMessagesUserCreated"><col>uID</col><col>createdAt</col></index>
+        <index name="sbMessagesPins"><col>kind</col><col>unpinnedAt</col><col>pinnedUntil</col></index>
+    </table>
+    <!-- timed bans: manual (byUID) or automatic (auto = 1, byUID = 0) -->
+    <table name="sbBans">
+        <field name="id" type="I"><key/><unsigned/><autoincrement/></field>
+        <field name="uID" type="I"><unsigned/><notnull/></field>
+        <field name="until" type="T"><notnull/></field>
+        <field name="reason" type="C" size="255"></field>
+        <field name="byUID" type="I"><unsigned/><notnull/><default value="0"/></field>
+        <field name="auto" type="L"><notnull/><default value="0"/></field>
+        <field name="createdAt" type="T"><notnull/></field>
+        <index name="sbBansUserUntil"><col>uID</col><col>until</col></index>
+    </table>
+</schema>

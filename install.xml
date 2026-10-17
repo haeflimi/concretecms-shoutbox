@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concrete5-cif version="1.0">
+    <blocktypes>
+        <blocktype handle="shoutbox" package="shoutbox"/>
+    </blocktypes>
+    <singlepages>
+        <page name="Shoutbox" path="/dashboard/shoutbox" filename="/dashboard/shoutbox.php" pagetype=""
+              description="Who may read and shout, the channels, limits and bans" package="shoutbox">
+            <attributes>
+                <attributekey handle="meta_keywords">
+                    <value>shoutbox, chat, shout, channel, ban, mercure</value>
+                </attributekey>
+            </attributes>
+        </page>
+    </singlepages>
+    <tasks>
+        <task handle="shoutbox_purge" package="shoutbox"/>
+    </tasks>
+</concrete5-cif>
