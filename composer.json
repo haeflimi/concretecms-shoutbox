@@ -8,5 +8,10 @@
     },
     "support": {
         "source": "https://github.com/haeflimi/concretecms-shoutbox"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
     }
 }

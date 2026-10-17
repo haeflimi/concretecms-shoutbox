@@ -43,6 +43,8 @@
         t.innerHTML = html.trim();
         return t.content.firstChild;
     };
+    // the channel filter chips: switched off for now (not needed yet), kept for later
+    var SHOW_FILTER = false;
     var icon = function (channel) {
         return channel && channel.faIcon ? '<i class="' + esc(channel.faIcon) + '" aria-hidden="true"></i> ' : '';
     };
@@ -239,6 +241,8 @@
         this.byHandle = {};
         allowed.forEach(function (c) { this.byHandle[c.handle] = c; }, this);
         this.defaultChannel = this.block.defaultChannel || boot.defaultChannel || this.config.defaultChannel || (allowed[0] && allowed[0].handle) || '';
+        // the site's default channel ("Allgemein"): its shouts carry no channel icon
+        this.generalChannel = boot.defaultChannel || this.config.defaultChannel || (allowed[0] && allowed[0].handle) || '';
         this.me = boot.me || null;
         this.canShout = !!boot.canShout;
         this.canModerate = !!boot.canModerate;
@@ -418,7 +422,7 @@
         html += '<div class="' + (display ? 'sb-display-body' : 'card-body sb-body') + '">';
 
         // channel chips
-        if (!display && this.channels.length > 1) {
+        if (SHOW_FILTER && !display && this.channels.length > 1) {
             html += '<div class="sb-chips mb-3" role="group" aria-label="' + esc(L.channel) + '">'
                 + '<button type="button" class="btn btn-sm ' + (this.filter === 'all' ? 'btn-primary' : 'btn-outline-secondary') + '" data-sb-filter="all">' + esc(L.all) + ' <span class="badge text-bg-light">' + this.shouts.length + '</span></button>';
             this.channels.forEach(function (c) {
@@ -470,7 +474,10 @@
                 html += '<li class="list-group-item px-0 d-flex gap-2' + (self.me && m.user.uID === self.me.uID ? ' sb-mine' : '') + '">' + self.avatar(m, compact ? 28 : 32)
                     + '<div class="flex-grow-1 min-w-0"><div class="d-flex align-items-baseline gap-2">'
                     + '<strong class="sb-nick text-truncate">' + esc(m.user.name) + '</strong>'
-                    + '<small class="text-muted text-nowrap">' + esc([m.seat, self.filter === 'all' && !compact ? name(m.channel) : ''].filter(Boolean).join(' · ')) + '</small>'
+                    + '<small class="text-muted text-nowrap">' + esc(m.seat || '') + '</small>'
+                    + (self.filter === 'all' && m.channel !== self.generalChannel && self.byHandle[m.channel] && self.byHandle[m.channel].faIcon
+                        ? '<small class="sb-channel text-' + esc(self.byHandle[m.channel].color) + '" title="' + esc(name(m.channel)) + '" role="img" aria-label="' + esc(name(m.channel)) + '"><i class="' + esc(self.byHandle[m.channel].faIcon) + '" aria-hidden="true"></i></small>'
+                        : '')
                     + '<small class="text-muted ms-auto text-nowrap">' + esc(timeOf(m.createdAt)) + '</small></div>'
                     + '<div class="sb-text">' + linkify(m.body) + '</div></div>'
                     + (self.canModerate ? '<div class="sb-actions d-flex gap-1 align-self-start">'
