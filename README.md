@@ -53,16 +53,31 @@ Values are stored in the database config (`shoutbox.*`); `application/config/sho
 
 ## Real-time with Mercure
 
-Concrete CMS 9.5 ships the Mercure client. Set it up once under **Dashboard › System › Notification › Events**:
-enable server-sent events, enter the hub's publish URL and the single secret key the hub was started with (the site
-needs a canonical URL). The shoutbox then publishes every shout, announcement, hide, unpin and ban to the private
-topic `<canonical URL>/shoutbox`, and the browsers subscribe to it:
+Concrete CMS 9.5 ships a Mercure client, but its tokens use the legacy `mercure` claim, which Mercure 1.x hubs
+reject. The shoutbox therefore uses the core settings only for the switch and the hub URL and signs its own RFC 9068
+access tokens (HS256, `authorization_details`). Set it up in two places:
 
-* hub on the **same origin** as the site (the usual `/.well-known/mercure` behind the web server): the core's
-  `mercureAuthorization` cookie authenticates the EventSource;
-* hub on **another origin** (a development site using the production hub, a hub on its own hostname): the
-  subscriber token travels as the `authorization` query parameter instead. The hub must then allow the site's
-  origin in `cors_origins`. Only the single-secret-key method is supported in this mode.
+1. **Dashboard › System › Notification › Events**: enable server-sent events and enter the hub's publish URL (the
+   site needs a canonical URL). The key field there is not used by the shoutbox.
+2. `application/config/mercure.php` (keep it out of git):
+
+   ```php
+   return ['hub' => [
+       'publisher_key' => '…',   // the hub's publisher JWT key
+       'subscriber_key' => '…',  // the hub's subscriber JWT key
+       'issuer' => 'https://example.org',                        // hub "issuer"
+       'audience' => 'https://example.org/.well-known/mercure',  // hub "resource_identifier"
+   ]];
+   ```
+
+The shoutbox then publishes every shout, announcement, hide, unpin and ban to the private topic
+`<canonical URL>/shoutbox`, and the browsers subscribe to it (`?match=`):
+
+* hub on the **same origin** as the site (the usual `/.well-known/mercure` behind the web server): the
+  `__Secure-mercure_access_token` cookie (HTTPS only) authenticates the EventSource;
+* hub on **another origin** (a development site using the production hub, a hub on its own hostname): the browser
+  sends the token as `Authorization` header over a fetch stream (hub 1.x takes no token in the address). The hub
+  must then allow the site's origin in `cors_origins`.
 
 Tokens run out after 30 minutes (core setting `concrete.notification.mercure.jwt.subscriber.expires_at`); the
 browser renews them in time and fills any gap after a reconnect. Without Mercure the feed polls every 15 seconds.

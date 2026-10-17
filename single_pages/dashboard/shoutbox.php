@@ -146,9 +146,10 @@ $channels = $settings->getChannels();
         <legend><?= t('Real-time') ?></legend>
         <?php if ($realtime['enabled']) { ?>
             <p class="mb-1"><span class="badge text-bg-success"><?= t('Mercure on') ?></span> <code><?= h($realtime['hubUrl']) ?></code></p>
-            <p class="text-muted small"><?= t('Topic %1$s, browsers authenticate by %2$s.', '<code>' . h($realtime['topic']) . '</code>', $realtime['auth'] === 'query' ? t('token in the address (hub on another origin)') : t('cookie (hub on the site\'s origin)')) ?></p>
+            <p class="text-muted small"><?= t('Topic %1$s, browsers authenticate by %2$s.', '<code>' . h($realtime['topic']) . '</code>', $realtime['auth'] === 'header' ? t('token in the request header (hub on another origin)') : t('cookie (hub on the site\'s origin)')) ?></p>
         <?php } else { ?>
             <p class="mb-1"><span class="badge text-bg-secondary"><?= t('Mercure off') ?></span> <?= t('The shoutbox polls every %s seconds instead.', $settings->getPollSeconds()) ?></p>
+            <p class="text-muted small"><?= t('Needs server-sent events with a publish URL (Dashboard › System › Notification › Events) and both hub keys in %s.', '<code>application/config/mercure.php</code>') ?></p>
         <?php } ?>
         <p class="text-muted small"><?= t('Set up under %s (server-sent events, hub publish URL, key).', '<a href="' . h(\URL::to('/dashboard/system/notification/events')) . '">' . t('System › Notification › Events') . '</a>') ?></p>
     </fieldset>

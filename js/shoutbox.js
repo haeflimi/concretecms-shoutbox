@@ -73,6 +73,51 @@
         });
     }
 
+    // ---------- EventSource with an Authorization header (hub on another origin, see Realtime) ----------
+    function HeaderSource(url, jwt) {
+        var self = this;
+        this.readyState = 0;
+        this.controller = new AbortController();
+        fetch(url, { headers: { Authorization: 'Bearer ' + jwt, Accept: 'text/event-stream' }, signal: this.controller.signal, cache: 'no-store' }).then(function (response) {
+            if (!response.ok || !response.body) {
+                throw new Error('HTTP ' + response.status);
+            }
+            self.readyState = 1;
+            if (self.onopen) { self.onopen(); }
+            var reader = response.body.getReader(), decoder = new TextDecoder(), buffer = '', data = [];
+            function pump() {
+                return reader.read().then(function (chunk) {
+                    if (chunk.done) {
+                        throw new Error('stream ended');
+                    }
+                    buffer += decoder.decode(chunk.value, { stream: true });
+                    var lines = buffer.split(/\r\n|\r|\n/);
+                    buffer = lines.pop();
+                    lines.forEach(function (line) {
+                        if (line === '') {
+                            if (data.length && self.onmessage) { self.onmessage({ data: data.join('\n') }); }
+                            data = [];
+                        } else if (line.indexOf('data:') === 0) {
+                            data.push(line.slice(5).replace(/^ /, ''));
+                        }
+                    });
+                    return pump();
+                });
+            }
+            return pump();
+        }).catch(function () {
+            if (self.readyState === 2) {
+                return;
+            }
+            self.readyState = 2;
+            if (self.onerror) { self.onerror(); }
+        });
+    }
+    HeaderSource.prototype.close = function () {
+        this.readyState = 2;
+        this.controller.abort();
+    };
+
     // ---------- one live connection per page ----------
     var live = {
         api: null, sse: null, source: null, listeners: [], timer: null, poller: null, dropped: false, pollSeconds: 15,
@@ -101,17 +146,16 @@
         },
         url: function () {
             var u = new URL(this.sse.hubUrl, location.href);
-            u.searchParams.append('topic', this.sse.topic);
-            if (this.sse.auth === 'query' && this.sse.jwt) {
-                u.searchParams.append('authorization', this.sse.jwt);
-            }
+            u.searchParams.append('match', this.sse.topic);
             return u.toString();
         },
         open: function () {
             var self = this;
             this.close();
             try {
-                this.source = new EventSource(this.url(), { withCredentials: this.sse.auth !== 'query' });
+                this.source = this.sse.auth === 'header'
+                    ? new HeaderSource(this.url(), this.sse.jwt)
+                    : new EventSource(this.url(), { withCredentials: true });
             } catch (e) {
                 console.warn('[shoutbox] no EventSource, polling instead', e);
                 this.poll();
@@ -147,7 +191,7 @@
             var self = this;
             this.api.get('subscribe').then(function (data) {
                 if (data.sse && data.sse.enabled) {
-                    var changed = self.sse.auth === 'query' && data.sse.jwt !== self.sse.jwt;
+                    var changed = self.sse.auth === 'header' && data.sse.jwt !== self.sse.jwt;
                     self.sse = data.sse;
                     if (reopen || changed || !self.source || self.source.readyState === EventSource.CLOSED) {
                         self.open();

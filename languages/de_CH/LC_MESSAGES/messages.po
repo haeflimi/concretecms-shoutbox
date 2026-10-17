@@ -196,8 +196,8 @@ msgstr "Echtzeit"
 msgid "Mercure on"
 msgstr "Mercure an"
 
-msgid "token in the address (hub on another origin)"
-msgstr "Token in der Adresse (Hub auf einer anderen Origin)"
+msgid "token in the request header (hub on another origin)"
+msgstr "Token im Request-Header (Hub auf einer anderen Origin)"
 
 msgid "cookie (hub on the site's origin)"
 msgstr "Cookie (Hub auf der Origin der Website)"
@@ -447,3 +447,6 @@ msgstr "Zu viele Shouts hintereinander"
 
 msgid "At most %s characters, please."
 msgstr "Höchstens %s Zeichen, bitte."
+
+msgid "Needs server-sent events with a publish URL (Dashboard › System › Notification › Events) and both hub keys in %s."
+msgstr "Braucht Server-Sent Events mit einer Publish-URL (Dashboard › System › Benachrichtigungen › Ereignisse) und beide Hub-Schlüssel in %s."
