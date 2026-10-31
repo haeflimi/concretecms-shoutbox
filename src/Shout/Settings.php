@@ -171,6 +171,18 @@ class Settings
         return max(2, (int) $this->value('toast_seconds', 8));
     }
 
+    /** a sound when a pinned announcement arrives (muted by the visitor's bell, like the pop-up) */
+    public function isSoundEnabled(): bool
+    {
+        return (bool) $this->value('sound', true);
+    }
+
+    /** the sound file (file manager), 0 = the built-in chime */
+    public function getSoundFileID(): int
+    {
+        return max(0, (int) $this->value('sound_file', 0));
+    }
+
     public function getPollSeconds(): int
     {
         return max(5, (int) $this->value('poll_seconds', 15));
@@ -194,6 +206,8 @@ class Settings
         }
         $this->store->save('shoutbox.channels', array_values($channels) ?: self::defaultChannels());
         $this->store->save('shoutbox.default_channel', (string) ($values['default_channel'] ?? ''));
+        $this->store->save('shoutbox.sound', !empty($values['sound']));
+        $this->store->save('shoutbox.sound_file', max(0, (int) ($values['sound_file'] ?? 0)));
         foreach (['max_length', 'history', 'rate_count', 'rate_window', 'rate_ban', 'retention_days', 'toast_seconds', 'poll_seconds'] as $key) {
             if (isset($values[$key])) {
                 $this->store->save('shoutbox.' . $key, (int) $values[$key]);
@@ -269,7 +283,7 @@ class Settings
             'text' => t('Text'),
             'pinHint' => t('Shows at the top of the channel until you unpin it.'),
             'pinMinutes' => t('Minutes (0 = until unpinned)'),
-            'pinnedBy' => t('Pinned · %1$s · %2$s'),
+            'pinnedBy' => t('Pinned · %s'),
             'unpin' => t('Unpin'),
             'hide' => t('Hide'),
             'ban' => t('Ban'),

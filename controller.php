@@ -28,7 +28,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'shoutbox';
     protected $appVersionRequired = '9.5.0';
-    protected $pkgVersion = '0.1.2';
+    protected $pkgVersion = '0.1.4';
     protected $pkgAutoloaderRegistries = [
         'src' => 'Shoutbox',
     ];

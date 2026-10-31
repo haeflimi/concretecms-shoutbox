@@ -3,6 +3,7 @@
 namespace Shoutbox\Shout;
 
 use Concrete\Core\Application\Application;
+use Concrete\Core\File\File;
 use Concrete\Core\User\User;
 use Shoutbox\Realtime\Realtime;
 
@@ -47,6 +48,20 @@ class Frontend
         $this->realtime = $realtime;
     }
 
+    /**
+     * The sound of pinned announcements: null = none, "chime" = the built-in one, else the URL of the chosen file.
+     */
+    protected function sound(): ?string
+    {
+        if (!$this->settings->isSoundEnabled()) {
+            return null;
+        }
+        $file = $this->settings->getSoundFileID() ? File::getByID($this->settings->getSoundFileID()) : null;
+        $version = $file ? $file->getApprovedVersion() : null;
+
+        return $version ? (string) $version->getURL() : 'chime';
+    }
+
     public function usesThemeUi(): bool
     {
         return $this->app->bound(self::THEME_BINDING);
@@ -76,6 +91,7 @@ class Frontend
             'maxLength' => $this->settings->getMaxLength(),
             'history' => $this->settings->getHistory(),
             'toastSeconds' => $this->settings->getToastSeconds(),
+            'sound' => $this->sound(),
             'pollSeconds' => $this->settings->getPollSeconds(),
             'channels' => $this->channels(),
             'defaultChannel' => $this->settings->getDefaultChannel(),

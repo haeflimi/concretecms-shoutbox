@@ -26,6 +26,7 @@ class Shoutbox extends DashboardPageController
     {
         $settings = $this->app->make(Settings::class);
         $this->set('settings', $settings);
+        $this->set('fileManager', $this->app->make('helper/concrete/file_manager'));
         $this->set('groups', $this->groups());
         $this->set('colors', Settings::COLORS);
         $this->set('icons', array_keys(Settings::ICONS));
@@ -62,6 +63,8 @@ class Shoutbox extends DashboardPageController
                 'rate_ban' => $post->get('rate_ban'),
                 'retention_days' => $post->get('retention_days'),
                 'toast_seconds' => $post->get('toast_seconds'),
+                'sound' => $post->get('sound'),
+                'sound_file' => $post->get('sound_file'),
                 'poll_seconds' => $post->get('poll_seconds'),
             ]);
             $this->flash('success', t('The shoutbox settings were saved.'));

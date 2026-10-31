@@ -43,6 +43,36 @@
         t.innerHTML = html.trim();
         return t.content.firstChild;
     };
+    // the sound of pinned announcements (dashboard setting): "chime" = a short synthesised two-note chime, else a
+    // file URL; browsers only play sound after the visitor interacted with the page
+    var audio = null;
+    var playSound = function (sound) {
+        try {
+            if (sound && sound !== 'chime') {
+                var file = new Audio(sound);
+                file.play().catch(function () {});
+                return;
+            }
+            if (sound !== 'chime' || !window.AudioContext) {
+                return;
+            }
+            audio = audio || new AudioContext();
+            if (audio.state === 'suspended') {
+                audio.resume();
+            }
+            [880, 1318.5].forEach(function (frequency, i) {
+                var at = audio.currentTime + i * 0.14, osc = audio.createOscillator(), gain = audio.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = frequency;
+                gain.gain.setValueAtTime(0.0001, at);
+                gain.gain.exponentialRampToValueAtTime(0.18, at + 0.02);
+                gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.45);
+                osc.connect(gain).connect(audio.destination);
+                osc.start(at);
+                osc.stop(at + 0.5);
+            });
+        } catch (e) { /* no audio: stay silent */ }
+    };
     // the channel filter chips: switched off for now (not needed yet), kept for later
     var SHOW_FILTER = false;
     var icon = function (channel) {
@@ -446,12 +476,12 @@
             pins.forEach(function (p) {
                 var c = self.byHandle[p.channel];
                 html += '<div class="sb-pin alert alert-' + esc(c ? c.color : 'warning') + ' d-flex gap-2' + (display ? ' sb-pin-lg' : ' py-2 mb-2') + '">'
-                    + '<span class="sb-pin-icon"><i class="fa fa-thumbtack" aria-hidden="true"></i></span>'
+                    + '<span class="sb-pin-icon"><i class="' + esc(c && c.faIcon ? c.faIcon : 'fa fa-thumbtack') + '" aria-hidden="true"></i></span>'
                     + '<div class="flex-grow-1 min-w-0">'
                     + '<div class="d-flex flex-wrap align-items-center gap-2"><strong class="sb-pin-title">' + esc(p.title) + '</strong>'
                     + (compact ? '' : '<span class="badge text-bg-secondary">' + icon(c) + esc(name(p.channel)) + '</span>') + '</div>'
                     + (p.body ? '<div class="sb-pin-text">' + linkify(p.body) + '</div>' : '')
-                    + '<div class="sb-meta text-muted small">' + esc(fmt(L.pinnedBy, p.by || '', timeOf(p.createdAt))) + '</div></div>'
+                    + '<div class="sb-meta text-muted small">' + esc(fmt(L.pinnedBy, timeOf(p.createdAt))) + '</div></div>'
                     + (self.canModerate && !display ? '<button type="button" class="btn btn-sm btn-outline-secondary align-self-start" data-sb-action="unpin" data-sb-id="' + p.id + '" title="' + esc(L.unpin) + '" aria-label="' + esc(L.unpin) + '">&times;</button>' : '')
                     + '</div>';
             });
@@ -637,6 +667,9 @@
     }
     Panel.prototype.arrived = function (m) {
         var L = this.config.labels || {};
+        if (m.kind === 'pin' && !this.muted && !(this.feed.me && m.user.uID === this.feed.me.uID)) {
+            playSound(this.config.sound);
+        }
         if (this.open) {
             this.seen = Math.max(this.seen, m.id);
             store.set('seen', this.seen);

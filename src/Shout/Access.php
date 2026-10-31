@@ -37,23 +37,6 @@ class Access
             && ($this->isAdmin($user) || $this->inGroups($user, $this->settings->getModeratorGroupIDs()));
     }
 
-    /**
-     * Sender label of an announcement: the first moderator group the user belongs to ("Catering"), else the
-     * display name.
-     */
-    public function moderatorLabel(User $user): string
-    {
-        foreach ($this->settings->getModeratorGroupIDs() as $gID) {
-            $group = Group::getByID($gID);
-            if ($group && $user->inGroup($group)) {
-                return (string) $group->getGroupDisplayName(false);
-            }
-        }
-        $info = $user->getUserInfoObject();
-
-        return $info ? (string) $info->getUserDisplayName() : (string) $user->getUserName();
-    }
-
     public static function isAdmin(User $user): bool
     {
         if (!$user->isRegistered()) {

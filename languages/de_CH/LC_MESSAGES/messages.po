@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-31 18:49+0100\n"
+"POT-Creation-Date: 2026-10-31 19:06+0100\n"
 "Language: de_CH\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -11,325 +11,291 @@ msgstr ""
 
 #: controller.php:38 blocks/shoutbox/controller.php:43
 #: blocks/shoutbox/form.php:17 src/Install/Installer.php:45
-#: src/Install/Installer.php:51 src/Shout/Settings.php:255
+#: src/Install/Installer.php:51 src/Shout/Settings.php:269
 msgid "Shoutbox"
 msgstr "Shoutbox"
 
 #: controller.php:43
-msgid ""
-"A chat room for the members: shouts in channels, pinned announcements, timed "
-"bans and a big-screen block, live through Mercure."
-msgstr ""
-"Ein Chatraum für die Mitglieder: Shouts in Kanälen, angeheftete Meldungen, "
-"befristete Sperren und ein Block für die grosse Leinwand, live über Mercure."
+msgid "A chat room for the members: shouts in channels, pinned announcements, timed bans and a big-screen block, live through Mercure."
+msgstr "Ein Chatraum für die Mitglieder: Shouts in Kanälen, angeheftete Meldungen, befristete Sperren und ein Block für die grosse Leinwand, live über Mercure."
 
-#: single_pages/dashboard/shoutbox.php:24
+#: single_pages/dashboard/shoutbox.php:25
 msgid "Primary"
 msgstr "Primär"
 
-#: single_pages/dashboard/shoutbox.php:24
+#: single_pages/dashboard/shoutbox.php:25
 msgid "Secondary"
 msgstr "Sekundär"
 
-#: single_pages/dashboard/shoutbox.php:24
+#: single_pages/dashboard/shoutbox.php:25
 msgid "Green"
 msgstr "Grün"
 
-#: single_pages/dashboard/shoutbox.php:24
+#: single_pages/dashboard/shoutbox.php:25
 msgid "Red"
 msgstr "Rot"
 
-#: single_pages/dashboard/shoutbox.php:24
+#: single_pages/dashboard/shoutbox.php:25
 msgid "Yellow"
 msgstr "Gelb"
 
-#: single_pages/dashboard/shoutbox.php:24
+#: single_pages/dashboard/shoutbox.php:25
 msgid "Blue"
 msgstr "Blau"
 
-#: single_pages/dashboard/shoutbox.php:30
+#: single_pages/dashboard/shoutbox.php:31
 msgid "Access"
 msgstr "Zugang"
 
-#: single_pages/dashboard/shoutbox.php:33
+#: single_pages/dashboard/shoutbox.php:34
 msgid "The shoutbox is on"
 msgstr "Die Shoutbox ist eingeschaltet"
 
-#: single_pages/dashboard/shoutbox.php:37
+#: single_pages/dashboard/shoutbox.php:38
 msgid "Who may read"
 msgstr "Wer lesen darf"
 
-#: single_pages/dashboard/shoutbox.php:39
+#: single_pages/dashboard/shoutbox.php:40
 msgid "Hold Ctrl (Cmd on a Mac) to pick several. Administrators always read."
-msgstr ""
-"Mit Ctrl (Cmd auf dem Mac) mehrere auswählen. Administratoren lesen immer."
+msgstr "Mit Ctrl (Cmd auf dem Mac) mehrere auswählen. Administratoren lesen immer."
 
-#: single_pages/dashboard/shoutbox.php:42
+#: single_pages/dashboard/shoutbox.php:43
 msgid "Who may shout"
 msgstr "Wer shouten darf"
 
-#: single_pages/dashboard/shoutbox.php:44
+#: single_pages/dashboard/shoutbox.php:45
 msgid "Guests never shout, whatever is ticked here."
 msgstr "Gäste shouten nie, egal was hier angekreuzt ist."
 
-#: single_pages/dashboard/shoutbox.php:47
+#: single_pages/dashboard/shoutbox.php:48
 msgid "Moderators"
 msgstr "Moderation"
 
-#: single_pages/dashboard/shoutbox.php:49
-msgid ""
-"Pin announcements, hide shouts, ban members. Administrators always moderate. "
-"The first of these groups a moderator belongs to is the sender of their "
-"announcements (\"Catering\")."
-msgstr ""
-"Meldungen anheften, Shouts ausblenden, Mitglieder sperren. Administratoren "
-"moderieren immer. Die erste dieser Gruppen, in der jemand ist, erscheint als "
-"Absender der Meldungen («Catering»)."
+#: single_pages/dashboard/shoutbox.php:50
+msgid "Pin announcements, hide shouts, ban members. Administrators always moderate. The first of these groups a moderator belongs to is the sender of their announcements (\"Catering\")."
+msgstr "Meldungen anheften, Shouts ausblenden, Mitglieder sperren. Administratoren moderieren immer. Die erste dieser Gruppen, in der jemand ist, erscheint als Absender der Meldungen («Catering»)."
 
-#: single_pages/dashboard/shoutbox.php:53
+#: single_pages/dashboard/shoutbox.php:54
 #, php-format
-msgid ""
-"The floating panel shows on pages with the page attribute \"Shoutbox\" (%s) "
-"ticked: set it in the page's attributes panel. The block \"Shoutbox\" can be "
-"placed on any page regardless."
-msgstr ""
-"Das schwebende Panel erscheint auf Seiten mit angekreuztem Seitenattribut "
-"«Shoutbox» (%s): im Attribute-Panel der Seite setzen. Der Block «Shoutbox» "
-"lässt sich unabhängig davon auf jeder Seite platzieren."
+msgid "The floating panel shows on pages with the page attribute \"Shoutbox\" (%s) ticked: set it in the page's attributes panel. The block \"Shoutbox\" can be placed on any page regardless."
+msgstr "Das schwebende Panel erscheint auf Seiten mit angekreuztem Seitenattribut «Shoutbox» (%s): im Attribute-Panel der Seite setzen. Der Block «Shoutbox» lässt sich unabhängig davon auf jeder Seite platzieren."
 
-#: single_pages/dashboard/shoutbox.php:55
+#: single_pages/dashboard/shoutbox.php:56
 msgid "Pages with the panel right now:"
 msgstr "Seiten mit dem Panel im Moment:"
 
-#: single_pages/dashboard/shoutbox.php:59
+#: single_pages/dashboard/shoutbox.php:60
 msgid "No page has it yet."
 msgstr "Noch keine Seite hat es."
 
-#: single_pages/dashboard/shoutbox.php:65 blocks/shoutbox/form.php:23
+#: single_pages/dashboard/shoutbox.php:66 blocks/shoutbox/form.php:23
 msgid "Channels"
 msgstr "Kanäle"
 
-#: single_pages/dashboard/shoutbox.php:67
+#: single_pages/dashboard/shoutbox.php:68
 msgid "Name"
 msgstr "Name"
 
-#: single_pages/dashboard/shoutbox.php:67
+#: single_pages/dashboard/shoutbox.php:68
 msgid "Handle"
 msgstr "Handle"
 
-#: single_pages/dashboard/shoutbox.php:67
+#: single_pages/dashboard/shoutbox.php:68
 msgid "Colour"
 msgstr "Farbe"
 
-#: single_pages/dashboard/shoutbox.php:67
+#: single_pages/dashboard/shoutbox.php:68
 msgid "Icon"
 msgstr "Icon"
 
-#: single_pages/dashboard/shoutbox.php:79
-#: single_pages/dashboard/shoutbox.php:220
+#: single_pages/dashboard/shoutbox.php:80
+#: single_pages/dashboard/shoutbox.php:229
 msgid "Remove"
 msgstr "Entfernen"
 
-#: single_pages/dashboard/shoutbox.php:84
+#: single_pages/dashboard/shoutbox.php:85
 msgid "Add channel"
 msgstr "Kanal hinzufügen"
 
-#: single_pages/dashboard/shoutbox.php:85
-msgid ""
-"The handle is derived from the name when left empty; shouts already posted "
-"keep their channel handle, so rename rather than delete and re-create. "
-"Removing all channels restores the defaults."
-msgstr ""
-"Das Handle wird aus dem Namen abgeleitet, wenn es leer bleibt; bereits "
-"gepostete Shouts behalten ihr Kanal-Handle, also lieber umbenennen als "
-"löschen und neu anlegen. Werden alle Kanäle entfernt, kommen die "
-"Standardkanäle zurück."
+#: single_pages/dashboard/shoutbox.php:86
+msgid "The handle is derived from the name when left empty; shouts already posted keep their channel handle, so rename rather than delete and re-create. Removing all channels restores the defaults."
+msgstr "Das Handle wird aus dem Namen abgeleitet, wenn es leer bleibt; bereits gepostete Shouts behalten ihr Kanal-Handle, also lieber umbenennen als löschen und neu anlegen. Werden alle Kanäle entfernt, kommen die Standardkanäle zurück."
 
-#: single_pages/dashboard/shoutbox.php:87 blocks/shoutbox/form.php:32
+#: single_pages/dashboard/shoutbox.php:88 blocks/shoutbox/form.php:32
 msgid "Default channel for new shouts"
 msgstr "Standardkanal für neue Shouts"
 
-#: single_pages/dashboard/shoutbox.php:97
+#: single_pages/dashboard/shoutbox.php:98
 msgid "Limits"
 msgstr "Limits"
 
-#: single_pages/dashboard/shoutbox.php:100
+#: single_pages/dashboard/shoutbox.php:101
 msgid "Characters per shout"
 msgstr "Zeichen pro Shout"
 
-#: single_pages/dashboard/shoutbox.php:104
+#: single_pages/dashboard/shoutbox.php:105
 msgid "Shouts loaded in the panel"
 msgstr "Shouts, die das Panel lädt"
 
-#: single_pages/dashboard/shoutbox.php:108
+#: single_pages/dashboard/shoutbox.php:109
 msgid "Shouts in a row"
 msgstr "Shouts hintereinander"
 
-#: single_pages/dashboard/shoutbox.php:112
+#: single_pages/dashboard/shoutbox.php:113
 msgid "… within seconds"
 msgstr "… innerhalb von Sekunden"
 
-#: single_pages/dashboard/shoutbox.php:116
+#: single_pages/dashboard/shoutbox.php:117
 msgid "Automatic ban, seconds"
 msgstr "Automatische Sperre, Sekunden"
 
-#: single_pages/dashboard/shoutbox.php:118
-msgid ""
-"A member who sends more than the shouts in a row above gets this ban; "
-"moderators are exempt."
-msgstr ""
-"Wer mehr als die oben eingestellten Shouts hintereinander schickt, bekommt "
-"diese Sperre; die Moderation ist ausgenommen."
+#: single_pages/dashboard/shoutbox.php:119
+msgid "A member who sends more than the shouts in a row above gets this ban; moderators are exempt."
+msgstr "Wer mehr als die oben eingestellten Shouts hintereinander schickt, bekommt diese Sperre; die Moderation ist ausgenommen."
 
-#: single_pages/dashboard/shoutbox.php:121
+#: single_pages/dashboard/shoutbox.php:122
 msgid "Announcement pop-up, seconds"
 msgstr "Einblendung der Meldungen, Sekunden"
 
-#: single_pages/dashboard/shoutbox.php:125
+#: single_pages/dashboard/shoutbox.php:128
+msgid "Play a sound for pinned announcements"
+msgstr "Sound bei angehefteten Ankündigungen abspielen"
+
+#: single_pages/dashboard/shoutbox.php:130
+msgid "Choose a sound file"
+msgstr "Sound-Datei wählen"
+
+#: single_pages/dashboard/shoutbox.php:131
+msgid "Optional (e.g. an MP3); without a file a short built-in chime plays. Visitors mute it with the bell, like the pop-up."
+msgstr "Optional (z. B. eine MP3); ohne Datei ertönt ein kurzer eingebauter Gong. Besucher schalten ihn mit der Glocke stumm, wie das Pop-up."
+
+#: single_pages/dashboard/shoutbox.php:134
 msgid "Polling without Mercure, seconds"
 msgstr "Abfrage ohne Mercure, Sekunden"
 
-#: single_pages/dashboard/shoutbox.php:132
+#: single_pages/dashboard/shoutbox.php:141
 msgid "Retention"
 msgstr "Aufbewahrung"
 
-#: single_pages/dashboard/shoutbox.php:134
+#: single_pages/dashboard/shoutbox.php:143
 msgid "Keep shouts for days"
 msgstr "Shouts behalten für Tage"
 
-#: single_pages/dashboard/shoutbox.php:136
-msgid ""
-"The task \"Purge Shoutbox\" (Dashboard › System › Automation) deletes older "
-"shouts and expired bans; schedule it or run it by hand."
-msgstr ""
-"Die Aufgabe «Shoutbox aufräumen» (Dashboard › System › Automatisierung) "
-"löscht ältere Shouts und abgelaufene Sperren; einplanen oder von Hand "
-"starten."
+#: single_pages/dashboard/shoutbox.php:145
+msgid "The task \"Purge Shoutbox\" (Dashboard › System › Automation) deletes older shouts and expired bans; schedule it or run it by hand."
+msgstr "Die Aufgabe «Shoutbox aufräumen» (Dashboard › System › Automatisierung) löscht ältere Shouts und abgelaufene Sperren; einplanen oder von Hand starten."
 
-#: single_pages/dashboard/shoutbox.php:141
+#: single_pages/dashboard/shoutbox.php:150
 msgid "Real-time"
 msgstr "Echtzeit"
 
-#: single_pages/dashboard/shoutbox.php:143
+#: single_pages/dashboard/shoutbox.php:152
 msgid "Mercure on"
 msgstr "Mercure an"
 
-#: single_pages/dashboard/shoutbox.php:144
+#: single_pages/dashboard/shoutbox.php:153
 msgid "token in the request header (hub on another origin)"
 msgstr "Token im Request-Header (Hub auf einer anderen Origin)"
 
-#: single_pages/dashboard/shoutbox.php:144
+#: single_pages/dashboard/shoutbox.php:153
 msgid "cookie (hub on the site's origin)"
 msgstr "Cookie (Hub auf der Origin der Website)"
 
-#: single_pages/dashboard/shoutbox.php:144
+#: single_pages/dashboard/shoutbox.php:153
 #, php-format
 msgid "Topic %1$s, browsers authenticate by %2$s."
 msgstr "Topic %1$s, Browser authentifizieren sich per %2$s."
 
-#: single_pages/dashboard/shoutbox.php:146
+#: single_pages/dashboard/shoutbox.php:155
 msgid "Mercure off"
 msgstr "Mercure aus"
 
-#: single_pages/dashboard/shoutbox.php:146
+#: single_pages/dashboard/shoutbox.php:155
 #, php-format
 msgid "The shoutbox polls every %s seconds instead."
 msgstr "Die Shoutbox fragt stattdessen alle %s Sekunden nach."
 
-#: single_pages/dashboard/shoutbox.php:147
+#: single_pages/dashboard/shoutbox.php:156
 #, php-format
-msgid ""
-"Needs server-sent events with a publish URL (Dashboard › System › "
-"Notification › Events) and both hub keys in %s."
-msgstr ""
-"Braucht Server-Sent Events mit einer Publish-URL (Dashboard › System › "
-"Benachrichtigungen › Ereignisse) und beide Hub-Schlüssel in %s."
+msgid "Needs server-sent events with a publish URL (Dashboard › System › Notification › Events) and both hub keys in %s."
+msgstr "Braucht Server-Sent Events mit einer Publish-URL (Dashboard › System › Benachrichtigungen › Ereignisse) und beide Hub-Schlüssel in %s."
 
-#: single_pages/dashboard/shoutbox.php:149
+#: single_pages/dashboard/shoutbox.php:158
 msgid "System › Notification › Events"
 msgstr "System › Benachrichtigung › Ereignisse"
 
-#: single_pages/dashboard/shoutbox.php:149
+#: single_pages/dashboard/shoutbox.php:158
 #, php-format
 msgid "Set up under %s (server-sent events, hub publish URL, key)."
-msgstr ""
-"Einrichten unter %s (Server-Sent Events, Publish-URL des Hubs, Schlüssel)."
+msgstr "Einrichten unter %s (Server-Sent Events, Publish-URL des Hubs, Schlüssel)."
 
-#: single_pages/dashboard/shoutbox.php:154
+#: single_pages/dashboard/shoutbox.php:163
 msgid "Save"
 msgstr "Speichern"
 
-#: single_pages/dashboard/shoutbox.php:160
+#: single_pages/dashboard/shoutbox.php:169
 msgid "Bans"
 msgstr "Sperren"
 
-#: single_pages/dashboard/shoutbox.php:162
+#: single_pages/dashboard/shoutbox.php:171
 msgid "Nobody is banned right now."
 msgstr "Im Moment ist niemand gesperrt."
 
-#: single_pages/dashboard/shoutbox.php:165
+#: single_pages/dashboard/shoutbox.php:174
 msgid "Member"
 msgstr "Mitglied"
 
-#: single_pages/dashboard/shoutbox.php:165
+#: single_pages/dashboard/shoutbox.php:174
 msgid "Until"
 msgstr "Bis"
 
-#: single_pages/dashboard/shoutbox.php:165
+#: single_pages/dashboard/shoutbox.php:174
 msgid "Reason"
 msgstr "Grund"
 
-#: single_pages/dashboard/shoutbox.php:165
+#: single_pages/dashboard/shoutbox.php:174
 msgid "By"
 msgstr "Durch"
 
-#: single_pages/dashboard/shoutbox.php:177
+#: single_pages/dashboard/shoutbox.php:186
 msgid "Lift the ban"
 msgstr "Sperre aufheben"
 
-#: single_pages/dashboard/shoutbox.php:188
+#: single_pages/dashboard/shoutbox.php:197
 msgid "Username or email"
 msgstr "Benutzername oder E-Mail"
 
-#: single_pages/dashboard/shoutbox.php:192
+#: single_pages/dashboard/shoutbox.php:201
 msgid "Minutes"
 msgstr "Minuten"
 
-#: single_pages/dashboard/shoutbox.php:196 src/Shout/Settings.php:277
+#: single_pages/dashboard/shoutbox.php:205 src/Shout/Settings.php:291
 msgid "Reason (optional)"
 msgstr "Grund (optional)"
 
-#: single_pages/dashboard/shoutbox.php:200 src/Shout/Settings.php:275
+#: single_pages/dashboard/shoutbox.php:209 src/Shout/Settings.php:289
 msgid "Ban"
 msgstr "Sperren"
 
 #: blocks/shoutbox/controller.php:48
-msgid ""
-"The shoutbox on a page: shouts in channels, pinned announcements and the "
-"composer; a big-screen template without input."
-msgstr ""
-"Die Shoutbox auf einer Seite: Shouts in Kanälen, angeheftete Meldungen und "
-"das Eingabefeld; ein Template für die grosse Leinwand ohne Eingabe."
+msgid "The shoutbox on a page: shouts in channels, pinned announcements and the composer; a big-screen template without input."
+msgstr "Die Shoutbox auf einer Seite: Shouts in Kanälen, angeheftete Meldungen und das Eingabefeld; ein Template für die grosse Leinwand ohne Eingabe."
 
 #: blocks/shoutbox/form.php:16
 msgid "Eyebrow"
 msgstr "Kicker"
 
-#: blocks/shoutbox/form.php:20 src/Shout/Settings.php:268
+#: blocks/shoutbox/form.php:20 src/Shout/Settings.php:282
 msgid "Title"
 msgstr "Titel"
 
-#: blocks/shoutbox/form.php:21 src/Shout/Settings.php:256
+#: blocks/shoutbox/form.php:21 src/Shout/Settings.php:270
 msgid "From the hall"
 msgstr "Aus der Halle"
 
 #: blocks/shoutbox/form.php:30
-msgid ""
-"Nothing ticked shows all channels. The channels themselves are set up under "
-"Dashboard › Shoutbox."
-msgstr ""
-"Nichts angekreuzt zeigt alle Kanäle. Die Kanäle selbst werden unter "
-"Dashboard › Shoutbox eingerichtet."
+msgid "Nothing ticked shows all channels. The channels themselves are set up under Dashboard › Shoutbox."
+msgstr "Nichts angekreuzt zeigt alle Kanäle. Die Kanäle selbst werden unter Dashboard › Shoutbox eingerichtet."
 
 #: blocks/shoutbox/form.php:34
 msgid "First channel of the block"
@@ -352,12 +318,8 @@ msgid "Only the Display template shows it, next to \"Write with us:\"."
 msgstr "Nur das Template «Display» zeigt ihn, neben «Schreib mit:»."
 
 #: blocks/shoutbox/view.php:19
-msgid ""
-"Shoutbox: not shown to this visitor (the read rule in Dashboard › Shoutbox "
-"decides)."
-msgstr ""
-"Shoutbox: für diese Besucherin, diesen Besucher nicht sichtbar (die "
-"Leseregel unter Dashboard › Shoutbox entscheidet)."
+msgid "Shoutbox: not shown to this visitor (the read rule in Dashboard › Shoutbox decides)."
+msgstr "Shoutbox: für diese Besucherin, diesen Besucher nicht sichtbar (die Leseregel unter Dashboard › Shoutbox entscheidet)."
 
 #: blocks/shoutbox/view.php:84
 msgid "You may read along but not shout here."
@@ -366,32 +328,6 @@ msgstr "Du kannst mitlesen, aber hier nicht shouten."
 #: blocks/shoutbox/view.php:86
 msgid "Shouting needs JavaScript."
 msgstr "Zum Shouten braucht es JavaScript."
-
-#: controllers/single_page/dashboard/shoutbox.php:67
-msgid "The shoutbox settings were saved."
-msgstr "Die Shoutbox-Einstellungen wurden gespeichert."
-
-#: controllers/single_page/dashboard/shoutbox.php:85
-#, php-format
-msgid "No member called \"%s\"."
-msgstr "Kein Mitglied namens «%s»."
-
-#: controllers/single_page/dashboard/shoutbox.php:89
-#, php-format
-msgid "%s is banned."
-msgstr "%s ist gesperrt."
-
-#: controllers/single_page/dashboard/shoutbox.php:107
-msgid "The ban was lifted."
-msgstr "Die Sperre wurde aufgehoben."
-
-#: controllers/single_page/dashboard/shoutbox.php:119
-msgid "Guests (everybody)"
-msgstr "Gäste (alle)"
-
-#: controllers/single_page/dashboard/shoutbox.php:119
-msgid "Signed-in members"
-msgstr "Angemeldete Mitglieder"
 
 #: src/Command/PurgeCommandHandler.php:36
 #, php-format
@@ -440,7 +376,7 @@ msgstr "Du darfst hier nicht shouten."
 msgid "Publishing to the Mercure hub failed: %s"
 msgstr "Senden an den Mercure-Hub fehlgeschlagen: %s"
 
-#: src/Shout/Bans.php:79 src/Shout/ShoutService.php:237
+#: src/Shout/Bans.php:79 src/Shout/ShoutService.php:236
 msgid "Deleted user"
 msgstr "Gelöschtes Mitglied"
 
@@ -448,172 +384,172 @@ msgstr "Gelöschtes Mitglied"
 msgid "automatic"
 msgstr "automatisch"
 
-#: src/Shout/Settings.php:210
+#: src/Shout/Settings.php:224
 msgid "General"
 msgstr "Allgemein"
 
-#: src/Shout/Settings.php:211
+#: src/Shout/Settings.php:225
 msgid "Catering"
 msgstr "Catering"
 
-#: src/Shout/Settings.php:212
+#: src/Shout/Settings.php:226
 msgid "Tournaments"
 msgstr "Turniere"
 
-#: src/Shout/Settings.php:213
+#: src/Shout/Settings.php:227
 msgid "Tech"
 msgstr "Technik"
 
-#: src/Shout/Settings.php:257
+#: src/Shout/Settings.php:271
 msgid "Open the shoutbox"
 msgstr "Shoutbox öffnen"
 
-#: src/Shout/Settings.php:258
+#: src/Shout/Settings.php:272
 msgid "Close"
 msgstr "Schliessen"
 
-#: src/Shout/Settings.php:259
+#: src/Shout/Settings.php:273
 #, php-format
 msgid "%s shouts"
 msgstr "%s Shouts"
 
-#: src/Shout/Settings.php:260
+#: src/Shout/Settings.php:274
 msgid "Channel"
 msgstr "Kanal"
 
-#: src/Shout/Settings.php:261
+#: src/Shout/Settings.php:275
 msgid "All"
 msgstr "Alle"
 
-#: src/Shout/Settings.php:262
+#: src/Shout/Settings.php:276
 #, php-format
 msgid "Shout in %s"
 msgstr "Shout in %s"
 
-#: src/Shout/Settings.php:263
+#: src/Shout/Settings.php:277
 #, php-format
 msgid "%1$s / %2$s characters"
 msgstr "%1$s / %2$s Zeichen"
 
-#: src/Shout/Settings.php:264
+#: src/Shout/Settings.php:278
 msgid "Send"
 msgstr "Senden"
 
-#: src/Shout/Settings.php:265
+#: src/Shout/Settings.php:279
 msgid "Pin"
 msgstr "Anheften"
 
-#: src/Shout/Settings.php:266
+#: src/Shout/Settings.php:280
 msgid "Shout"
 msgstr "Shout"
 
-#: src/Shout/Settings.php:267
+#: src/Shout/Settings.php:281
 msgid "Pinned announcement"
 msgstr "Angeheftete Meldung"
 
-#: src/Shout/Settings.php:269
+#: src/Shout/Settings.php:283
 msgid "Text"
 msgstr "Text"
 
-#: src/Shout/Settings.php:270
+#: src/Shout/Settings.php:284
 msgid "Shows at the top of the channel until you unpin it."
 msgstr "Erscheint oben im Kanal, bis du sie löst."
 
-#: src/Shout/Settings.php:271
+#: src/Shout/Settings.php:285
 msgid "Minutes (0 = until unpinned)"
 msgstr "Minuten (0 = bis zum Lösen)"
 
-#: src/Shout/Settings.php:272
+#: src/Shout/Settings.php:286
 #, php-format
-msgid "Pinned · %1$s · %2$s"
-msgstr "Angeheftet · %1$s · %2$s"
+msgid "Pinned · %s"
+msgstr "Angeheftet · %s"
 
-#: src/Shout/Settings.php:273
+#: src/Shout/Settings.php:287
 msgid "Unpin"
 msgstr "Lösen"
 
-#: src/Shout/Settings.php:274
+#: src/Shout/Settings.php:288
 msgid "Hide"
 msgstr "Ausblenden"
 
-#: src/Shout/Settings.php:276
+#: src/Shout/Settings.php:290
 #, php-format
 msgid "Ban %s for how many minutes?"
 msgstr "%s für wie viele Minuten sperren?"
 
-#: src/Shout/Settings.php:278
+#: src/Shout/Settings.php:292
 msgid "No shouts yet. Write the first one."
 msgstr "Noch keine Shouts. Schreib den ersten."
 
-#: src/Shout/Settings.php:279
+#: src/Shout/Settings.php:293
 #, php-format
 msgid "It is still quiet in %s."
 msgstr "In %s ist es noch ruhig."
 
-#: src/Shout/Settings.php:280
+#: src/Shout/Settings.php:294
 msgid "Sign in to join the conversation."
 msgstr "Melde dich an, um mitzuschreiben."
 
-#: src/Shout/Settings.php:281
+#: src/Shout/Settings.php:295
 msgid "Sign in"
 msgstr "Anmelden"
 
-#: src/Shout/Settings.php:282
+#: src/Shout/Settings.php:296
 msgid "Live from the hall"
 msgstr "Live aus der Halle"
 
-#: src/Shout/Settings.php:283
+#: src/Shout/Settings.php:297
 msgid "Write with us:"
 msgstr "Schreib mit:"
 
-#: src/Shout/Settings.php:284 src/Shout/ShoutService.php:289
+#: src/Shout/Settings.php:298 src/Shout/ShoutService.php:287
 #, php-format
 msgid "You are banned until %s."
 msgstr "Du bist bis %s gesperrt."
 
-#: src/Shout/Settings.php:285 src/Shout/ShoutService.php:300
+#: src/Shout/Settings.php:299 src/Shout/ShoutService.php:298
 #, php-format
 msgid "Too fast: take a %s minute break."
 msgstr "Zu schnell: %s Minuten Pause."
 
-#: src/Shout/Settings.php:286
+#: src/Shout/Settings.php:300
 msgid "Mute announcements"
 msgstr "Meldungen stummschalten"
 
-#: src/Shout/Settings.php:287
+#: src/Shout/Settings.php:301
 msgid "Show announcements"
 msgstr "Meldungen einblenden"
 
-#: src/Shout/Settings.php:288
+#: src/Shout/Settings.php:302
 msgid "New shouts"
 msgstr "Neue Shouts"
 
-#: src/Shout/Settings.php:289
+#: src/Shout/Settings.php:303
 msgid "Loading…"
 msgstr "Lädt …"
 
-#: src/Shout/Settings.php:290
+#: src/Shout/Settings.php:304
 msgid "Offline, trying again…"
 msgstr "Offline, versuche es weiter …"
 
-#: src/Shout/Settings.php:291
+#: src/Shout/Settings.php:305
 msgid "Hide this shout for everybody?"
 msgstr "Diesen Shout für alle ausblenden?"
 
-#: src/Shout/Settings.php:292
+#: src/Shout/Settings.php:306
 msgid "Unpin this announcement?"
 msgstr "Diese Meldung lösen?"
 
-#: src/Shout/Settings.php:293
+#: src/Shout/Settings.php:307
 #, php-format
 msgid "Seat %s"
 msgstr "Platz %s"
 
-#: src/Shout/Settings.php:294
+#: src/Shout/Settings.php:308
 msgid "you"
 msgstr "du"
 
-#: src/Shout/Settings.php:295
+#: src/Shout/Settings.php:309
 msgid "today"
 msgstr "heute"
 
@@ -629,19 +565,19 @@ msgstr "Unbekannter Kanal."
 msgid "Give the announcement a title."
 msgstr "Gib der Meldung einen Titel."
 
-#: src/Shout/ShoutService.php:204
+#: src/Shout/ShoutService.php:203
 msgid "Member not found."
 msgstr "Mitglied nicht gefunden."
 
-#: src/Shout/ShoutService.php:207
+#: src/Shout/ShoutService.php:206
 msgid "Moderators cannot be banned."
 msgstr "Die Moderation lässt sich nicht sperren."
 
-#: src/Shout/ShoutService.php:298
+#: src/Shout/ShoutService.php:296
 msgid "Too many shouts in a row"
 msgstr "Zu viele Shouts hintereinander"
 
-#: src/Shout/ShoutService.php:311
+#: src/Shout/ShoutService.php:309
 #, php-format
 msgid "At most %s characters, please."
 msgstr "Höchstens %s Zeichen, bitte."
@@ -651,13 +587,35 @@ msgid "Purge Shoutbox"
 msgstr "Shoutbox aufräumen"
 
 #: src/Command/Task/PurgeController.php:23
-msgid ""
-"Deletes shouts older than the retention set in Dashboard › Shoutbox and the "
-"bans that ran out."
-msgstr ""
-"Löscht Shouts, die älter sind als die Aufbewahrung unter Dashboard › "
-"Shoutbox, und abgelaufene Sperren."
+msgid "Deletes shouts older than the retention set in Dashboard › Shoutbox and the bans that ran out."
+msgstr "Löscht Shouts, die älter sind als die Aufbewahrung unter Dashboard › Shoutbox, und abgelaufene Sperren."
 
 #: src/Command/Task/PurgeController.php:33
 msgid "Shoutbox purged."
 msgstr "Shoutbox aufgeräumt."
+
+#: controllers/single_page/dashboard/shoutbox.php:70
+msgid "The shoutbox settings were saved."
+msgstr "Die Shoutbox-Einstellungen wurden gespeichert."
+
+#: controllers/single_page/dashboard/shoutbox.php:88
+#, php-format
+msgid "No member called \"%s\"."
+msgstr "Kein Mitglied namens «%s»."
+
+#: controllers/single_page/dashboard/shoutbox.php:92
+#, php-format
+msgid "%s is banned."
+msgstr "%s ist gesperrt."
+
+#: controllers/single_page/dashboard/shoutbox.php:110
+msgid "The ban was lifted."
+msgstr "Die Sperre wurde aufgehoben."
+
+#: controllers/single_page/dashboard/shoutbox.php:122
+msgid "Guests (everybody)"
+msgstr "Gäste (alle)"
+
+#: controllers/single_page/dashboard/shoutbox.php:122
+msgid "Signed-in members"
+msgstr "Angemeldete Mitglieder"

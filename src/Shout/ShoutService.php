@@ -155,7 +155,6 @@ class ShoutService
         $minutes = max(0, min(10080, $minutes));
         $id = $this->insert([
             'kind' => Settings::PIN, 'uID' => (int) $user->getUserID(), 'channel' => $channel, 'title' => $title, 'body' => $body,
-            'byLabel' => mb_substr($this->access->moderatorLabel($user), 0, 64),
             'pinnedUntil' => $minutes > 0 ? (new DateTimeImmutable())->modify('+' . $minutes . ' minutes')->format('Y-m-d H:i:s') : null,
         ]);
         $rendered = $this->renderOne($id);
@@ -269,7 +268,6 @@ class ShoutService
             'seat' => $this->seats->seatFor((int) $row['uID']),
             'title' => $row['title'] !== null && $row['title'] !== '' ? (string) $row['title'] : null,
             'body' => (string) $row['body'],
-            'by' => $row['byLabel'] !== null && $row['byLabel'] !== '' ? (string) $row['byLabel'] : null,
             'createdAt' => $created->format(DATE_ATOM),
             'time' => app('helper/date')->formatCustom('H:i', $created),
             'pinnedUntil' => $pinnedUntil ? $pinnedUntil->format(DATE_ATOM) : null,

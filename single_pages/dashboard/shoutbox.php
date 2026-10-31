@@ -12,6 +12,7 @@ defined('C5_EXECUTE') or die('Access Denied.');
  * @var array{enabled: bool, hubUrl: string, auth: string, topic: string} $realtime
  * @var array<int, array{name: string, path: string, url: string}> $pages
  * @var string $attributeHandle
+ * @var Concrete\Core\Application\Service\FileManager $fileManager
  */
 
 $groupSelect = static function (string $name, array $selected, int $rows = 6) use ($groups): void { ?>
@@ -120,6 +121,14 @@ $channels = $settings->getChannels();
             <div class="col-md-3 mb-3">
                 <label class="form-label" for="toast_seconds"><?= t('Announcement pop-up, seconds') ?></label>
                 <input type="number" class="form-control" name="toast_seconds" id="toast_seconds" min="2" max="60" value="<?= $settings->getToastSeconds() ?>">
+            </div>
+            <div class="col-md-6 mb-3">
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" name="sound" id="sound" value="1"<?= $settings->isSoundEnabled() ? ' checked' : '' ?>>
+                    <label class="form-check-label" for="sound"><?= t('Play a sound for pinned announcements') ?></label>
+                </div>
+                <?= $fileManager->file('sound_file', 'sound_file', t('Choose a sound file'), $settings->getSoundFileID() ? Concrete\Core\File\File::getByID($settings->getSoundFileID()) : null) ?>
+                <div class="form-text"><?= t('Optional (e.g. an MP3); without a file a short built-in chime plays. Visitors mute it with the bell, like the pop-up.') ?></div>
             </div>
             <div class="col-md-3 mb-3">
                 <label class="form-label" for="poll_seconds"><?= t('Polling without Mercure, seconds') ?></label>
