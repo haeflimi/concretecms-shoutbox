@@ -63,7 +63,6 @@ class Shoutbox extends DashboardPageController
                 'retention_days' => $post->get('retention_days'),
                 'toast_seconds' => $post->get('toast_seconds'),
                 'poll_seconds' => $post->get('poll_seconds'),
-                'pin_durations' => $post->get('pin_durations'),
             ]);
             $this->flash('success', t('The shoutbox settings were saved.'));
 

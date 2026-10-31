@@ -118,11 +118,6 @@ $channels = $settings->getChannels();
                 <div class="form-text"><?= t('A member who sends more than the shouts in a row above gets this ban; moderators are exempt.') ?></div>
             </div>
             <div class="col-md-3 mb-3">
-                <label class="form-label" for="pin_durations"><?= t('Pin durations, minutes') ?></label>
-                <input type="text" class="form-control" name="pin_durations" id="pin_durations" value="<?= h(implode(', ', $settings->getPinDurations())) ?>">
-                <div class="form-text"><?= t('Choices for moderators; 0 = until unpinned.') ?></div>
-            </div>
-            <div class="col-md-3 mb-3">
                 <label class="form-label" for="toast_seconds"><?= t('Announcement pop-up, seconds') ?></label>
                 <input type="number" class="form-control" name="toast_seconds" id="toast_seconds" min="2" max="60" value="<?= $settings->getToastSeconds() ?>">
             </div>

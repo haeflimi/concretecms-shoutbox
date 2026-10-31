@@ -176,15 +176,6 @@ class Settings
         return max(5, (int) $this->value('poll_seconds', 15));
     }
 
-    /** @return int[] minutes a pin stays, 0 = until it is unpinned */
-    public function getPinDurations(): array
-    {
-        $durations = array_values(array_unique(array_map('intval', (array) $this->value('pin_durations', [5, 15, 60, 0]))));
-        sort($durations);
-
-        return $durations ?: [0];
-    }
-
     /**
      * @param array<string, mixed> $values keys as in the dashboard form
      */
@@ -207,10 +198,6 @@ class Settings
             if (isset($values[$key])) {
                 $this->store->save('shoutbox.' . $key, (int) $values[$key]);
             }
-        }
-        if (isset($values['pin_durations'])) {
-            $durations = array_filter(array_map('intval', preg_split('/[\s,]+/', (string) $values['pin_durations'])), static fn ($m) => $m >= 0 && $m <= 10080);
-            $this->store->save('shoutbox.pin_durations', array_values(array_unique($durations)) ?: [0]);
         }
     }
 
@@ -281,9 +268,7 @@ class Settings
             'titleField' => t('Title'),
             'text' => t('Text'),
             'pinHint' => t('Shows at the top of the channel until you unpin it.'),
-            'pinFor' => t('Pinned for'),
-            'untilUnpinned' => t('until unpinned'),
-            'minutes' => t('%s minutes'),
+            'pinMinutes' => t('Minutes (0 = until unpinned)'),
             'pinnedBy' => t('Pinned · %1$s · %2$s'),
             'unpin' => t('Unpin'),
             'hide' => t('Hide'),

@@ -246,7 +246,6 @@
         this.me = boot.me || null;
         this.canShout = !!boot.canShout;
         this.canModerate = !!boot.canModerate;
-        this.pinDurations = boot.pinDurations || this.config.pinDurations || [0];
         this.maxLength = boot.maxLength || this.config.maxLength || 200;
         this.shouts = (boot.shouts || []).filter(this.inScope, this);
         this.pins = (boot.pins || []).filter(this.inScope, this);
@@ -367,6 +366,10 @@
         void L;
     };
     Feed.prototype.target = function () {
+        // only moderators choose the channel, the server puts everybody else's shouts into the general channel
+        if (!this.canModerate) {
+            return this.generalChannel;
+        }
         var select = this.root.querySelector('[data-sb-channel]');
         if (select) {
             return select.value;
@@ -527,14 +530,10 @@
             return s + '</select>';
         };
         if (this.mode === 'pin') {
-            var options = '';
-            this.pinDurations.forEach(function (m) {
-                options += '<option value="' + m + '">' + esc(m > 0 ? fmt(L.minutes, m) : L.untilUnpinned) + '</option>';
-            });
             html += '<div class="d-flex flex-wrap gap-2 mb-2">' + channelSelect('data-sb-pin-channel', this.pinChannel || this.target())
-                + '<select class="form-select form-select-sm w-auto" data-sb-minutes aria-label="' + esc(L.pinFor) + '">' + options + '</select></div>'
+                + '<input type="number" class="form-control form-control-sm w-auto" data-sb-minutes min="0" max="10080" step="1" value="' + (this.pinMinutes || 0) + '" title="' + esc(L.pinMinutes) + '" aria-label="' + esc(L.pinMinutes) + '"></div>'
                 + '<input type="text" class="form-control form-control-sm mb-2" data-sb-title maxlength="120" placeholder="' + esc(L.titleField) + '" value="' + esc(this.draftTitle || '') + '">';
-        } else if (this.channels.length > 1 && (compact || this.filter === 'all')) {
+        } else if (this.canModerate && this.channels.length > 1) {
             html += '<div class="mb-2">' + channelSelect('data-sb-channel', this.pinChannel || this.target()) + '</div>';
         }
         html += '<div class="d-flex align-items-end gap-2">'
@@ -579,6 +578,10 @@
         }
         if (title) {
             title.addEventListener('input', function () { self.draftTitle = title.value; });
+        }
+        var pinMinutes = root.querySelector('[data-sb-minutes]');
+        if (pinMinutes) {
+            pinMinutes.addEventListener('input', function () { self.pinMinutes = pinMinutes.value; });
         }
         if (channel) {
             channel.addEventListener('change', function () { self.pinChannel = channel.value; });

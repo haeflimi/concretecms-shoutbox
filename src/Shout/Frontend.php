@@ -79,7 +79,6 @@ class Frontend
             'pollSeconds' => $this->settings->getPollSeconds(),
             'channels' => $this->channels(),
             'defaultChannel' => $this->settings->getDefaultChannel(),
-            'pinDurations' => $this->settings->getPinDurations(),
             'canShout' => $this->access->mayShout($user),
             'canModerate' => $this->access->canModerate($user),
         ];
@@ -100,7 +99,6 @@ class Frontend
             'canModerate' => $this->access->canModerate($user),
             'channels' => $this->channels(),
             'defaultChannel' => $this->settings->getDefaultChannel(),
-            'pinDurations' => $this->settings->getPinDurations(),
             'maxLength' => $this->settings->getMaxLength(),
             'shouts' => $this->shouts->recent($limit, $sinceId),
             'pins' => $this->shouts->pins($sinceId),

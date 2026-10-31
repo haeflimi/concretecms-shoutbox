@@ -102,7 +102,7 @@ class ShoutService
     }
 
     /**
-     * A member shouts into a channel.
+     * A member shouts into a channel: moderators into any, everybody else into the default channel.
      *
      * @throws UserMessageException
      * @throws BannedException
@@ -115,6 +115,9 @@ class ShoutService
         $body = $this->cleanBody($body, $this->settings->getMaxLength());
         if ($body === '') {
             throw new UserMessageException(t('Write something first.'));
+        }
+        if (!$this->access->canModerate($user)) {
+            $channel = $this->settings->getDefaultChannel();
         }
         if ($this->settings->getChannel($channel) === null) {
             throw new UserMessageException(t('Unknown channel.'));
