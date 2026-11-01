@@ -82,6 +82,11 @@ The shoutbox then publishes every shout, announcement, hide, unpin and ban to th
 Tokens run out after 30 minutes (core setting `concrete.notification.mercure.jwt.subscriber.expires_at`); the
 browser renews them in time and fills any gap after a reconnect. Without Mercure the feed polls every 15 seconds.
 
+Switching server-sent events on also makes the **core** publish (process and batch progress, task output, file
+thumbnails). Its own token carries the legacy `mercure` claim, which hub 1.x rejects ("Attempted to send update to
+Mercure service and failed" in the log for every update). With the keys above configured, the package hands the core's
+`Hub` a hub 1.x publisher token (all topics, signed per publish), so these updates go through as well.
+
 ### Server setup
 
 The hub is one static binary. A minimal production setup on a Linux host:
@@ -193,3 +198,5 @@ English, German (`de_DE`, `de_CH`). Strings are extracted from the PHP files (`x
 * **0.1.0** — first version: feed, channels, pinned announcements, bans with the automatic rate-limit ban, the block
   with three templates, the floating panel on pages with the "Shoutbox" attribute, Mercure in cookie and query-token
   mode, polling fallback, purge task, built-in Bootstrap 5 UI with the theme hand-over.
+* **0.1.5** — the core's own Mercure updates are published with a hub 1.x token (no more "Attempted to send update to
+  Mercure service and failed" notices). No upgrade steps.

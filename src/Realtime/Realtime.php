@@ -126,25 +126,39 @@ class Realtime
     }
 
     /**
-     * A Mercure 1.x access token (RFC 9068, HS256) for the shoutbox topic.
+     * Publisher token for the core's own updates (processes, batches, file thumbnails under
+     * <canonical URL>/concrete/events/…): the core signs a legacy "mercure" claim that hub 1.x rejects, so the package
+     * hands the core's Hub this one instead (see the controller's on_start). All topics, like the core's own claim:
+     * hub 1.1 refuses "match_urlpattern" in tokens. Server side only, never given to a browser.
+     */
+    public function corePublisherJwt(): string
+    {
+        return $this->token('publisher', ['publish'], (string) ($this->config->get('concrete.notification.mercure.jwt.publisher.expires_at') ?: '+5 minutes'), [
+            ['match' => '*'],
+        ], 'concrete');
+    }
+
+    /**
+     * A Mercure 1.x access token (RFC 9068, HS256), for the shoutbox topic unless other topic selectors are given.
      *
      * @param string[] $actions
+     * @param array<int, array<string, string>>|null $topics
      */
-    protected function token(string $which, array $actions, string $expires): string
+    protected function token(string $which, array $actions, string $expires, ?array $topics = null, string $client = 'shoutbox'): string
     {
         $now = time();
         $claims = [
             'iss' => (string) $this->config->get('mercure.hub.issuer'),
             'aud' => (string) ($this->config->get('mercure.hub.audience') ?: $this->hubUrl()),
-            'sub' => 'shoutbox',
-            'client_id' => 'shoutbox',
+            'sub' => $client,
+            'client_id' => $client,
             'iat' => $now,
             'exp' => (new DateTimeImmutable($expires))->getTimestamp(),
             'jti' => bin2hex(random_bytes(12)),
             'authorization_details' => [[
                 'type' => 'https://mercure.rocks/authorization-detail',
                 'actions' => $actions,
-                'topics' => [['match' => $this->topic()]],
+                'topics' => $topics ?? [['match' => $this->topic()]],
             ]],
         ];
         $b64 = static fn (string $s): string => rtrim(strtr(base64_encode($s), '+/', '-_'), '=');

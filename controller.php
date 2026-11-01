@@ -10,8 +10,11 @@ use Concrete\Core\Package\Package;
 use Concrete\Core\Page\View\PageView;
 use Concrete\Core\Routing\Router;
 use Concrete\Core\User\User;
+use Symfony\Component\Mercure\Hub;
 use Shoutbox\Command\Task\PurgeController;
 use Shoutbox\Install\Installer;
+use Shoutbox\Realtime\CoreTokenProvider;
+use Shoutbox\Realtime\Realtime;
 use Shoutbox\Shout\Access;
 use Shoutbox\Shout\Frontend;
 use Shoutbox\Shout\Settings;
@@ -28,7 +31,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'shoutbox';
     protected $appVersionRequired = '9.5.0';
-    protected $pkgVersion = '0.1.4';
+    protected $pkgVersion = '0.1.5';
     protected $pkgAutoloaderRegistries = [
         'src' => 'Shoutbox',
     ];
@@ -49,6 +52,14 @@ class Controller extends Package
         $this->app->singleton(Access::class);
         $this->app->singleton(ShoutService::class);
         $this->app->singleton(Frontend::class);
+
+        // the core publishes process, batch and thumbnail updates with a legacy token that hub 1.x rejects (a log
+        // notice per update): with our keys configured, its Hub signs hub 1.x tokens instead
+        $this->app->extend(Hub::class, function ($hub) {
+            $realtime = $this->app->make(Realtime::class);
+
+            return $realtime->isEnabled() ? new Hub($realtime->hubUrl(), new CoreTokenProvider($realtime)) : $hub;
+        });
 
         $router = $this->app->make(Router::class);
         $api = 'Shoutbox\Controller\Api::';
